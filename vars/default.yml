@@ -1,5 +1,10 @@
 ---
-mysql_root_password: "root"
 http_host: "13.233.247.23"
 http_conf: "13.233.247.23.conf"
 http_port: "80"
+
+#MySQL Settings
+mysql_root_password: "root"
+mysql_db: "wordpress"
+mysql_user: "wordpress"
+mysql_password: "password"
