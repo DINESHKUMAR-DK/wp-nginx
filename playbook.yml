@@ -65,6 +65,14 @@
         state: absent
         login_user: root
         login_password: "{{ mysql_root_password }}"
+        
+    - name: Creates database for WordPress
+      mysql_db:
+        name: "{{ mysql_db }}"
+        state: present
+        login_user: root
+        login_password: "{{ mysql_root_password }}"
+      tags: [ mysql ]
 
 # UFW Configuration
     - name: "UFW - Allow HTTP on port {{ http_port }}"
