@@ -90,14 +90,6 @@
 
    # WordPress Configuration
    
-    - name: Create document root
-      file:
-        path: "/var/www/{{ http_host }}"
-        state: directory
-        owner: "www-data"
-        group: "www-data"
-        mode: '0755'
-      tags: [ apache ]
    
     - name: Download and unpack latest WordPress
       unarchive:
