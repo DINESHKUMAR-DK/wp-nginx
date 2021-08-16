@@ -104,15 +104,6 @@
         src: "files/wp-config.php.j2"
         dest: "/var/www/wordpress/wp-config.php"
       tags: [ wordpress ]
-      
-    - name: Create document root
-      file:
-        path: "/var/www/wordpress"
-        state: directory
-        owner: "www-data"
-        group: "www-data"
-        mode: '0755'
-      tags: [ apache ]
 
     - name: Set ownership
       file:
@@ -121,6 +112,7 @@
         recurse: yes
         owner: www-data
         group: www-data
+        mode: '0775'
       tags: [ wordpress ]
 
     - name: Set permissions for directories
