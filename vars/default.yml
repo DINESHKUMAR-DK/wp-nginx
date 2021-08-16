@@ -1,6 +1,6 @@
 ---
-http_host: "13.233.18.61"
-http_conf: "13.233.18.61.conf"
+http_host: "15.206.168.232"
+http_conf: "15.206.168.232.conf"
 http_port: "80"
 
 #MySQL Settings
