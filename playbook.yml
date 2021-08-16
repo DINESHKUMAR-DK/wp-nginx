@@ -1,5 +1,5 @@
 ##################################################
-# DO Community Playbooks: LEMP on Ubuntu 18.04
+# DO Community Playbooks: LEMP and wordpress on Ubuntu 18.04
 ##################################################
 ---
 - hosts: all
@@ -94,7 +94,7 @@
    # WordPress Configuration
    
    
-    - name: Download and unpack latest WordPress
+    - name: Download and unpack latest WordPress from internet
       unarchive:
         src: https://wordpress.org/latest.tar.gz
         dest: "/var/www/"
@@ -129,12 +129,12 @@
     
 
   handlers:
-    - name: Reload Nginx
+    - name: Reload Nginx 
       service:
         name: nginx
         state: reloaded
 
-    - name: Restart Nginx
+    - name: Restart Nginx service
       service:
         name: nginx
         state: restarted
