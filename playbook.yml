@@ -111,7 +111,7 @@
         dest: "/var/www/{{ http_host }}/wordpress/wp-config.php"
       tags: [ wordpress ]
 
-
+  handlers:
     - name: Reload Nginx
       service:
         name: nginx
