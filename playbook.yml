@@ -73,6 +73,16 @@
         login_user: root
         login_password: "{{ mysql_root_password }}"
       tags: [ mysql ]
+      
+    - name: Create MySQL user for WordPress
+      mysql_user:
+        name: "{{ mysql_user }}"
+        password: "{{ mysql_password }}"
+        priv: "{{ mysql_db }}.*:ALL"
+        state: present
+        login_user: root
+        login_password: "{{ mysql_root_password }}"
+      tags: [ mysql ]
 
 # UFW Configuration
     - name: "UFW - Allow HTTP on port {{ http_port }}"
