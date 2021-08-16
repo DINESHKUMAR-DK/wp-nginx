@@ -96,7 +96,7 @@
         src: https://wordpress.org/latest.tar.gz
         dest: "/var/www/"
         remote_src: yes
-        creates: "/var/www/{{ http_host }}"
+        creates: "/var/www/{{ http_host }}/"
       tags: [ wordpress ]
       
     - name: Set up wp-config
