@@ -1,10 +1,10 @@
 # LEMP on Ubuntu 18.04 with wordpress 
 
-Wordpress
-nginx
-php
-php-fpm
-mysql
+- `Wordpress`
+- `nginx`
+- `php`
+- `php-fpm`
+- `mysql`
 
 
 
